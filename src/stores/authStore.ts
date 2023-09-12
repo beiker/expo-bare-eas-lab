@@ -15,7 +15,7 @@ export type SessionState = keyof typeof sessionState
 
 interface AuthState {
   user: UserAuth | null
-  logIn: (params: LoginParams) => void
+  logIn: (params: LoginParams) => Promise<UserAuth>
   logOut: () => void
   checkSession: () => Promise<SessionState>
   refreshSession: () => Promise<SessionState>
@@ -28,6 +28,7 @@ export const useAuthStore = create<AuthState>()(
       logIn: async ({username, password}) => {
         const user = await logInUser(username, password)
         set({user})
+        return user
       },
       logOut: async () => {
         const isLogOutSuccess = await logOutUser()

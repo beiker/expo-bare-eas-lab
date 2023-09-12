@@ -17,6 +17,7 @@
     "ipods": "cd ios && pod deintegrate && pod install && cd .."
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.1",
     "expo": "^49.0.8",
     "expo-constants": "~14.4.2",
     "expo-dev-client": "^2.4.8",
@@ -28,14 +29,17 @@
     "graphql": "^15.8.0",
     "graphql-request": "^6.1.0",
     "react": "18.2.0",
+    "react-hook-form": "^7.46.1",
     "react-native": "0.72.3",
     "react-native-beacons-manager": "github:oalcantarhypha/react-native-beacons-manager#expo-bare",
+    "react-native-flash-message": "^0.4.2",
     "react-native-gesture-handler": "~2.12.0",
     "react-native-mmkv": "^2.10.2",
     "react-native-reanimated": "^3.3.0",
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
     "react-native-ui-lib": "^7.8.0",
+    "zod": "^3.22.2",
     "zustand": "^4.4.1"
   },
   "devDependencies": {

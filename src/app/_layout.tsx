@@ -1,6 +1,7 @@
 import {SplashScreen, Slot} from 'expo-router'
 import * as React from 'react'
 import {StyleSheet} from 'react-native'
+import FlashMessage from 'react-native-flash-message'
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context'
 
 import {loadAppColorScheme} from '@/constants/colorsPalette'
@@ -18,6 +19,7 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.wrapper}>
+        <FlashMessage position="bottom" />
         <Slot />
       </SafeAreaView>
     </SafeAreaProvider>
